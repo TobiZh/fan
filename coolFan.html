@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>songsongZhou的电风扇</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    #fan {
+      position: absolute;
+      width: 16em;
+      height: 30em;
+      left: calc(50% - 8em);
+      top: calc(50% - 15em);
+    }
+
+    .guard {
+      height: 16em;
+      width: 16em;
+      position: absolute;
+      z-index: 10;
+    }
+
+    .frame {
+      height: 16em;
+      width: 16em;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 3px solid #000;
+      border-radius: 50%;
+    }
+
+    li[class^="cir"] {
+      position: absolute;
+      border: 2px solid #000;
+      border-radius: 50%;
+      z-index: 12;
+    }
+
+    .cir1 {
+      height: 14em;
+      width: 14em;
+      left: 1em;
+      top: 1em;
+    }
+
+    .cir2 {
+      height: 12em;
+      width: 12em;
+      left: 2em;
+      top: 2em;
+    }
+
+    .cir3 {
+      height: 10em;
+      width: 10em;
+      left: 3em;
+      top: 3em;
+    }
+
+    .cir4 {
+      height: 8em;
+      width: 8em;
+      left: 4em;
+      top: 4em;
+    }
+
+    .cir5 {
+      height: 6em;
+      width: 6em;
+      left: 5em;
+      top: 5em;
+    }
+
+    .cir6 {
+      height: 3em;
+      width: 3em;
+      left: 6.5em;
+      top: 6.5em;
+      background: radial-gradient(50% 30%, #222 0%, #000 100%);
+    }
+
+    li[class^="bar"] {
+      position: absolute;
+      border: 1px solid #000;
+      transform: rotate(45deg);
+      z-index: 11;
+    }
+
+    .bar1 {
+      height: 16em;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+
+    .bar2 {
+      width: 16em;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    .blades {
+      height: 12em;
+      width: 12em;
+      position: absolute;
+      top: 2em;
+      left: 2em;
+      z-index: 9;
+      animation: blades 1s infinite linear;
+    }
+
+    .blades li {
+      height: 6.5em;
+      width: 6.5em;
+      position: absolute;
+      border-radius: 0 50% 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    /*扇叶*/
+    .b1 {
+      top: 7em;
+      left: 2.75em;
+      transform: rotate(45deg);
+    }
+
+    .b2 {
+      top: 0.5em;
+      left: -1em;
+      transform: rotate(165deg);
+    }
+
+    .b3 {
+      top: 0.5em;
+      left: 6.5em;
+      transform: rotate(285deg);
+    }
+
+    /*底座*/
+    .base {
+      height: 1em;
+      width: 10em;
+      position: absolute;
+      top: 29em;
+      left: 3em;
+      z-index: 5;
+      border-radius: 33%;
+      background: #222;
+      box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .base:after {
+      height: 20em;
+      width: 0.5em;
+      position: absolute;
+      top: -20em;
+      left: 4.75em;
+      z-index: 6;
+      content: '';
+      display: block;
+      box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(0deg, #111 0%, #212121 100%)
+    }
+
+    /* Animation 扇叶转动*/
+    @keyframes blades {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(1080deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div id="fan">
+  <div>
+    <ul class="guard">
+      <li class="frame"></li>
+      <li class="cir1"></li>
+      <li class="cir2"></li>
+      <li class="cir3"></li>
+      <li class="cir4"></li>
+      <li class="cir5"></li>
+      <li class="cir6"></li>
+      <li class="bar1"></li>
+      <li class="bar2"></li>
+    </ul>
+    <ul class="blades">
+      <li class="b1"></li>
+      <li class="b2"></li>
+      <li class="b3"></li>
+    </ul>
+  </div>
+  <div class="base"></div>
+</div>
+</body>
+</html>
